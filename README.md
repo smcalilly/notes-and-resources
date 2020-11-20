@@ -1,5 +1,5 @@
 # Learning Leaflet
-These are some investment time artifacts for DataMade. 
+These are some investment time artifacts for DataMade. I learned how to do some basic stuff with Leaflet.
 
 For plain javascript, I worked in the `/vanilla` directory.
 
