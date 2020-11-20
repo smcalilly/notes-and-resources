@@ -17,10 +17,10 @@ var popup = L.popup()
     .openOn(mymap);
 
 let circle = L.circle([34.27, -88.69], {
-	color: 'red',
-	fillColor: '#f03',
-	fillOpacity: 0.5,
-	radius: 500
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
 }).addTo(mymap)
 
 let polygon = L.polygon([
@@ -44,10 +44,13 @@ function onMapClick(e) {
 
 mymap.on('click', onMapClick);
 
+
+// i tried making a form but on my first attempt
+// the map reloads whenever the form submits...
 function moveLocations(event) {
-	console.log(event)
-	// popup
-	// 	.setLatLng
+    console.log(event)
+    // popup
+    //  .setLatLng
 }
 
 let formInput = document.getElementById('coordinate-input');
