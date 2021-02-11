@@ -17,7 +17,5 @@ the admin is enabled in the default project template used by `startproject`. if 
 3. might need to do something with the `MIDDLEWARE` setting
 4. [Hook the admin's URLs into your URLconf](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#hooking-adminsite-to-urlconf)
 
-I'm closer to answering my question about why I can't access my admin site, but I haven't answered it.
-
 ## urls
 - how to list all the routes? is there a way to do `rake routes` in django? https://stackoverflow.com/questions/2092608/is-there-something-similar-to-rake-routes-in-django
