@@ -1,3 +1,6 @@
+# Learning Notes
+Repo where I put some learning notes.
+
 # Learning Leaflet
 These are some investment time artifacts for DataMade. I learned how to do some basic stuff with Leaflet.
 
