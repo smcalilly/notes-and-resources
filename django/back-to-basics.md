@@ -22,5 +22,9 @@ when you put `django.contrib.admin` in your `INSTALLED_APPS` setting, **Django a
 
 in my own words: if i have an app called `/counties`, then i register the models in `/counties/admin.py`. those should be recognized in the project's admin interface. (doucble check that this is true)
 
+- [you can override the default admin site](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#overriding-the-default-admin-site). this is not my problem today.
+- [more urlconf tricks](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#multiple-admin-sites-in-the-same-urlconf)
+- good to know: [you can add a password reset feature](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#adding-a-password-reset-feature)
+
 ## urls
 - how to list all the routes? is there a way to do `rake routes` in django? https://stackoverflow.com/questions/2092608/is-there-something-similar-to-rake-routes-in-django
