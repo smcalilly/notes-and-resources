@@ -1,6 +1,6 @@
 # Back to the Django Basics
 
-I just picked up a dusty app and I'm confused about the state in which I left the app, only 2.5 months ago. It's a huge mess. If I could access the admin site and look at the models, then I might be able to see what I was thinking about the models. But I can't access my admin site, and I'm not sure why. Is something wrong with my admin site/URL confs? 
+I picked up a dusty app and I'm confused about the state in which I left the app, only 2.5 months ago. It's a huge mess. If I could access the admin site and look at the models, then I might be able to see what I was thinking about the models. But I can't access my admin site, and I'm not sure why. Is something wrong with my admin site/URL confs? 
 
 I don't know. I don't know enough about the admin site. So I'm going back to the basics to fill in knowledge gaps — maybe I'll find an answer through the process.
 
