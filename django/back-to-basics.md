@@ -12,7 +12,7 @@ powerful part of Django is the automatic admin interface. It reads metadata from
 admin has a bunch of hooks for customization, but beware trying to use those hooks exclusively
 
 the admin is enabled in the default project template used by `startproject`. if you're not using the default project template, [you can do it manually](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#overview):
-1. add Add `django.contrib.admin` and its dependencies to your `INSTALLED_APPS` setting
+1. add `django.contrib.admin` and its dependencies to your `INSTALLED_APPS` setting
 2. configure a DjangoTemplates backend in your `TEMPLATES`
 3. might need to do something with the `MIDDLEWARE` setting
 4. [Hook the admin's URLs into your URLconf](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#hooking-adminsite-to-urlconf)
