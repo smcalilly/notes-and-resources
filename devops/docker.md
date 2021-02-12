@@ -71,5 +71,8 @@ run:
 docker-compose up
 ```
 
+## questions
+- i have three different places where i declare a command to run the app. which one does which? 
+
 ## resources
 - [DataMade's guide to docker for local development](https://github.com/datamade/how-to/blob/master/docker/local-development.md)
