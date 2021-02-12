@@ -3,7 +3,9 @@
 filling in knowledge gaps about docker
 
 ## docker vs docker-compose
-docker builds an image based on a dockerfile. docker can run the container. docker-compose can mangage multiple running containers — the services that interact with each other. so docker-compose needs some docker images to run as containers.
+docker builds an image, which is specified by Dockerfile. docker can then run a container based on the image it build. 
+
+docker-compose can mangage multiple running containers — the services that interact with each other. so docker-compose needs some docker images to run as containers.
 
 
 ## docker-compose
