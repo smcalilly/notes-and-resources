@@ -9,9 +9,25 @@ docker-compose can mangage multiple running containers — the services that int
 
 
 ## docker-compose
-declares an application and its dependent services. nice way to create the app's environment + connect it to a database. you can connect ports across the "network" (?)
+declares an application and its dependent services. nice way to create the app's environment + connect it to a database. you can connect ports across the "network" (?) (i think docker-compose creates a network for communicating with the different services?)
 
 there are several versions of it. use v2 because it's got some good health checks.
+
+
+## Container life cycle
+[from the datamade docs](https://github.com/datamade/how-to/blob/master/docker/local-development.md#1-dockerfile)
+
+### images
+By definition, docker-compose up "builds, (re)creates, starts, and attaches to containers for a service." More precisely, it builds any images that it can't find on the host, then proceeds with the rest.
+
+the application image is built the first time you run docker-compose up. 
+
+if you make any changes to your dockerfile or development environment (like adding something to the requirements.txt), you must rebuild your image using docker-compose up --build
+
+### containers
+`docker-compose up` creates and starts containers for all the services defined in `docker-compose.yml`. if you change your service definition, the Compose will automatically recreate your applicaiton container (this is the opposite of an image)
+
+
 
 ### examples
 build the images:
