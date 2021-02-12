@@ -10,7 +10,8 @@ github actions help automate tasks for your SDLC. actions are event driven, mean
 - runners: a runner is a server that has the github actions runner application installed. 
 
 
-
+### pr template
+[you can add a PR template](https://docs.github.com/en/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository)
 
 
 
