@@ -28,3 +28,4 @@ in my own words: if i have an app called `/counties`, then i register the models
 
 ## urls
 - how to list all the routes? is there a way to do `rake routes` in django? https://stackoverflow.com/questions/2092608/is-there-something-similar-to-rake-routes-in-django
+https://stackoverflow.com/questions/1275486/django-how-can-i-see-a-list-of-urlpatterns/23874019
