@@ -89,6 +89,10 @@ run:
 docker-compose up
 ```
 
+## etc
+### variables
+[See their documentation](https://docs.docker.com/compose/environment-variables/)
+
 ## questions
 - i have three different places where i declare a command to run the app. which one does which? 
 
