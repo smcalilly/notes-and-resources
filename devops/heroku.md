@@ -66,7 +66,7 @@ an app.json file is required when using review apps with the heroku.yml manifest
 [read more about the review app's app.json](https://devcenter.heroku.com/articles/app-json-schema)
 
 ## troubleshooting
-pipeline worked for the review app but not when the code deployed to the staging pipeline. got the error `heroku[router]: at=error code=H14 desc="No web processes running" method=GET`. not sure why, but this worked: `heroku stack:set container`. the heroku pipeline's "stack" needed to change?
+pipeline worked for the review app but not when the code deployed to the staging pipeline. got the error `heroku[router]: at=error code=H14 desc="No web processes running" method=GET`. not sure why, but this worked: `heroku stack:set container`. the heroku pipeline's "stack" needed to change? found the answer by looking at [the heroku docs](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml#getting-started), but need to figure out how to configure a setup with a flask app that doesn't need this command.
 
 
 ## questions
