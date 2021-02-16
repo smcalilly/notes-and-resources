@@ -1,6 +1,4 @@
-# more advanced stuff
-
-## signals
+# signals
 i have come across this in the past and now i'm reading about using a signal to extend the user form: https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html
 
 ### what is a signal?
