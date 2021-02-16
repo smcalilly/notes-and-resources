@@ -64,3 +64,10 @@ run:
 an app.json file is required when using review apps with the heroku.yml manifest. [this will show you how that works.](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml#release-configuring-release-phase)
 
 [read more about the review app's app.json](https://devcenter.heroku.com/articles/app-json-schema)
+
+## troubleshooting
+pipeline worked for the review app but not when the code deployed to the staging pipeline. got the error `heroku[router]: at=error code=H14 desc="No web processes running" method=GET`. not sure why, but this worked: `heroku stack:set container`. the heroku pipeline's "stack" needed to change?
+
+
+## questions
+- what is a "stack" ?
