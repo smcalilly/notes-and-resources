@@ -62,3 +62,5 @@ run:
 
 ### review apps and app.json
 an app.json file is required when using review apps with the heroku.yml manifest. [this will show you how that works.](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml#release-configuring-release-phase)
+
+[read more about the review app's app.json](https://devcenter.heroku.com/articles/app-json-schema)
