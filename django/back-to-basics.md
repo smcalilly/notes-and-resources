@@ -29,3 +29,43 @@ in my own words: if i have an app called `/counties`, then i register the models
 ## urls
 - how to list all the routes? is there a way to do `rake routes` in django? https://stackoverflow.com/questions/2092608/is-there-something-similar-to-rake-routes-in-django
 https://stackoverflow.com/questions/1275486/django-how-can-i-see-a-list-of-urlpatterns/23874019
+
+
+## user authentication
+django has authentication built-in (nice!). django authentication provides both **authentication** and **authorization** together. this "is generally referred to as the authentication system, as these features are somewhat coupled."
+
+[see the documentation here](https://docs.djangoproject.com/en/3.1/topics/auth/default/).
+
+### user objects
+user objects are the core of the authentication system. typically represent the people interacting with the site. used to enable things like restricting access (aka authorization), registering user profiles, associating content with creators, etc. only one class of user exists in django's auth framework. so, "superusers" or admin "staff" users are user objects with special attributes set, (instead of different classes of user objects)
+
+primary attributes for a default user:
+- username
+- password
+- email
+- first_name
+- last_name
+
+[see the documentaton for the full api](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User)
+
+
+## usage
+
+### creating a user
+this example is from the django doc. they used john lennon as the example user but george harrison is the best.
+```python
+>>> from django.contrib.auth.models import User
+>>> user = User.objects.create_user('george', 'harrison@thebeatles.com', 'allthingsmustpass')
+
+# At this point, user is a User object that has already been saved
+# to the database. You can continue to change its attributes
+# if you want to change other fields.
+>>> user.last_name = 'Harrison'
+>>> user.save()
+```
+
+## permissions and authorization
+[come back here](https://docs.djangoproject.com/en/3.1/topics/auth/default/#permissions-and-authorization) whenever you're implementing some authorization stuff
+
+## authentication in web requests
+django uses sessions and middleware to hook the auth system into request objects. [see the documentation](https://docs.djangoproject.com/en/3.1/topics/auth/default/#authentication-in-web-requests) whenever you need to learn more details.
