@@ -4,7 +4,7 @@ i have come across this in the past and now i'm reading about using a signal to 
 ### what is a signal?
 [from the documentation](https://docs.djangoproject.com/en/3.1/topics/signals/): "Django includes a “signal dispatcher” which helps allow decoupled applications get notified when actions occur elsewhere in the framework. In a nutshell, signals allow certain senders to notify a set of receivers that some action has taken place. They’re especially useful when many pieces of code may be interested in the same events."
 
-[the following notes from reading this](https://simpleisbetterthancomplex.com/tutorial/2016/07/28/how-to-create-django-signals.html)
+[the following notes are from reading this](https://simpleisbetterthancomplex.com/tutorial/2016/07/28/how-to-create-django-signals.html)
 
 ### when should i use a signal?
 - when many pieces of code may be interested in the same events
