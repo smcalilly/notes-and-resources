@@ -9,3 +9,6 @@ misc resources for django
 ## forms
 - [forms, fields, and kwargs](https://www.agiliq.com/blog/2019/01/django-formview/#adding-form-kwargs)
 - [how to dynamically filter a modelform's queryset](https://simpleisbetterthancomplex.com/questions/2017/03/22/how-to-dynamically-filter-modelchoices-queryset-in-a-modelform.html)
+
+## orm
+-[querying with a manytomanyfield](https://www.revsys.com/tidbits/tips-using-djangos-manytomanyfield/)
