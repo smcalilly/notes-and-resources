@@ -1,0 +1,1 @@
+- [a collection of learning resources](https://learnbyexample.github.io/py_resources/)
