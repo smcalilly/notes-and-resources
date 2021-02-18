@@ -1,1 +1,2 @@
 - what is the difference between reverse and reverse_lazy ?
+- why does a invalid form response return a 200? shouldn't that be a 400? confusing as
