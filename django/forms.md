@@ -19,3 +19,6 @@ validation of a form is split into several steps:
 
 ### example of using the clean methods
 [this stackoverflow answer shows one use case](https://stackoverflow.com/questions/7948750/custom-form-validation#answer-7948998)
+
+### raising validation errors
+[see the docs](https://docs.djangoproject.com/en/3.2/ref/forms/validation/#raising-validationerror) for examples on the best way to raise validation errors.
