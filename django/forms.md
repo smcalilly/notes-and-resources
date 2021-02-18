@@ -20,5 +20,22 @@ validation of a form is split into several steps:
 ### example of using the clean methods
 [this stackoverflow answer shows one use case](https://stackoverflow.com/questions/7948750/custom-form-validation#answer-7948998)
 
+here's my version of that code:
+```python
+class SignUpForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('email', 'first_name', 'last_name')
+
+    def clean_email(self):
+        """Validate the uniqueness of a User email address."""
+        email = self.cleaned_data['email']
+        
+        if User.objects.filter(email=email).exists():
+            raise ValidationError(f'User with email {email} already exists.')
+        
+        return email
+```
+
 ### raising validation errors
 [see the docs](https://docs.djangoproject.com/en/3.2/ref/forms/validation/#raising-validationerror) for examples on the best way to raise validation errors.
