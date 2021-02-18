@@ -45,7 +45,7 @@ from my_app.forms import SignUpForm
 class SignUpView(FormView):
     template_name = 'my_app/sign_up.html'
     form_class = SignUpForm
-    success_url = reverse_lazy('my_app:pricing')
+    success_url = reverse('pricing')
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
