@@ -37,5 +37,39 @@ class SignUpForm(forms.ModelForm):
         return email
 ```
 
+some basic code for my view (pre-code review !), which needed some special sign up logic:
+```python
+from django.contrib import messages
+from my_app.forms import SignUpForm
+
+class SignUpView(FormView):
+    template_name = 'parserator_web/pricing.html'
+    form_class = SignUpForm
+    success_url = reverse_lazy('my_app:pricing')
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        if self.request.POST:
+            context['form'] = SignUpForm(self.request.POST)
+        else:
+            context['form'] = SignUpForm()
+            
+        return context
+    
+    def form_valid(self, form):
+        context = self.get_context_data()
+        
+        if context['form'].is_valid():
+            user = context['form'].save(commit=False)
+            user.username = user.email
+            user.save()
+
+            messages.success(self.request, 'Project successfully created!')
+            return super().form_valid()
+        else:
+            return super().form_invalid(form)
+```
+
 ### raising validation errors
 [see the docs](https://docs.djangoproject.com/en/3.2/ref/forms/validation/#raising-validationerror) for examples on the best way to raise validation errors.
