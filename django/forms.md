@@ -65,7 +65,7 @@ class SignUpView(FormView):
             user.username = user.email
             user.save()
 
-            messages.success(self.request, 'Project successfully created!')
+            messages.success(self.request, 'Account successfully created!')
             return super().form_valid()
         else:
             return super().form_invalid(form)
