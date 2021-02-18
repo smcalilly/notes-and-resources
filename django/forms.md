@@ -1,7 +1,7 @@
 # forms
 
 ## form and field validation
-[words copied from here](https://docs.djangoproject.com/en/3.2/ref/forms/validation/)
+[words re-typed from here](https://docs.djangoproject.com/en/3.2/ref/forms/validation/)
 
 form validation happens when the data is cleaned. if you want to customize this process, there are various places to make changes, each one serving a different purpose. three types of cleaning methods are run during form processing. these are normally executed whn you called the `is_valid()` method on the form. 
 
