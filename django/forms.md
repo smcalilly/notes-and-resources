@@ -43,7 +43,7 @@ from django.contrib import messages
 from my_app.forms import SignUpForm
 
 class SignUpView(FormView):
-    template_name = 'parserator_web/pricing.html'
+    template_name = 'my_app/sign_up.html'
     form_class = SignUpForm
     success_url = reverse_lazy('my_app:pricing')
     
