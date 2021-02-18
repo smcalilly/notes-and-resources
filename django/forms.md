@@ -20,7 +20,7 @@ validation of a form is split into several steps:
 ### example of using the clean methods
 [this stackoverflow answer shows one use case](https://stackoverflow.com/questions/7948750/custom-form-validation#answer-7948998)
 
-here's my version of that code, using the most flexible `ModelForm` instead of a `UserCreationForm`:
+here's my version of that code, using the more flexible `ModelForm` instead of a `UserCreationForm`:
 ```python
 class SignUpForm(forms.ModelForm):
     class Meta:
