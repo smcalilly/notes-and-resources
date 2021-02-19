@@ -11,4 +11,5 @@ misc resources for django
 - [how to dynamically filter a modelform's queryset](https://simpleisbetterthancomplex.com/questions/2017/03/22/how-to-dynamically-filter-modelchoices-queryset-in-a-modelform.html)
 
 ## orm
--[querying with a manytomanyfield](https://www.revsys.com/tidbits/tips-using-djangos-manytomanyfield/)
+- [how to do a migration on an existing model](https://stackoverflow.com/questions/54855018/how-to-set-default-value-for-new-model-field-in-existing-model-with-data#answer-54855067)
+- [querying with a manytomanyfield](https://www.revsys.com/tidbits/tips-using-djangos-manytomanyfield/)
