@@ -1,2 +1,3 @@
 - what is the difference between reverse and reverse_lazy ?
 - why does a invalid form response return a 200? shouldn't that be a 400? confusing as
+- i read in two scoops of django to always backup your database before migration. how to do that with django + heroku?
