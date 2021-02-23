@@ -16,3 +16,6 @@ misc resources for django, resources found along the way and need more time to d
 
 ## model classes
 - [good example of how to use an abstract model class](https://florimondmanca.github.io/djangorestframework-api-key/guide/#api-key-models)
+
+## etc
+- [example of a reusable decorator to use for a view](https://simpleisbetterthancomplex.com/tutorial/2017/02/21/how-to-add-recaptcha-to-django-site.html#recaptcha-decorator)
