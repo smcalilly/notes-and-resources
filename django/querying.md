@@ -1,0 +1,1 @@
+- [contains and icontains](https://www.atemon.com/blog/django-field-lookup-contains-and-icontains/)
