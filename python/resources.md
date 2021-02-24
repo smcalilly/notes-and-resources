@@ -1,1 +1,2 @@
 - [a collection of learning resources](https://learnbyexample.github.io/py_resources/)
+- [examples of the requests library](https://realpython.com/python-requests/)
