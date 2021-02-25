@@ -1,5 +1,5 @@
 # Lambda Calculus
-I can't find my notes from the first time I read this chapter, which is probably a good thing because, if we're being honest, I'm not sure I fully understand everything when I first read it.
+I can't find my notes from the first time I read this chapter, which is probably a good thing because, if we're being honest, I'm not sure I fully understand everything when I first read it. 
 
 before computers or programming languages, alonzo church came up with a set of rules for working with functions (what he termed "lambdas"). these rules allow you to compute anything that can be computed. you use lambda calculus everyday when you write code.
 
@@ -88,6 +88,28 @@ function thing(x){return y}(x)
 "With this function: `λx.y`, it doesn’t matter what you pass into it, some value y will be returned. This is called the constant function as it returns a constant value of y no matter what you pass in for x."
 
 ## bound and free variables
+there are rules when you apply a value to a function. in the function `λx.y (z)`, there are two variables: `x` and `y`. 
+- the variable `x` is in the function head as the argument and thus is **bound** to this expression.
+- the variable `y` is not bound to any lambda function, so it's known as **free**
+
+the difference between the two is very important. i can substitute `x` in this function if i substitute every occurence of the bound variable `x`. so if i wanted to change x to z, for instance, i could:
+```lambda
+λz.z y
+```
+
+this wouldn't change the meaning of the function. if i tried to change `y`, then we would have some trouble. to understand why, we need to dive into substitutions and reductions.
+
+(question): the examples for this concept are confusing. he introduces this idea like: "In this expression we’re dealing with two variables: x and y." i'm not sure which expression he's talking about? the one from the previous section? i tried using the one for the previous section (`λx.y (z)`), but that doesn't match his substitution: `λz.z y`. what am i misunderstanding? i can understand this: `λz.z y`, it would look like this in javascript: `(z => z)(y)`. `y` is applied to the anonymous function, via the `z` argument.
+
+glad to have worked with javascript and already using some of these ideas without realizing it.
+
+## substitution and reduction
+when you apply a value to a function, you substitute that value in the function itself. substitution is *left-applicative*, which means that you start on the left and move to the right as required.
+
+for instance, let's substitute and then reduce this function:
+```lambda
+λx.x 3
+```
 
 
 
