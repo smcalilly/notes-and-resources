@@ -82,7 +82,7 @@ consider this function and application:
 
 the same in javascript:
 ```javascript
-function thing(x){return y}(x)
+function thing(x){return y}(z)
 ```
 
 "With this function: `λx.y`, it doesn’t matter what you pass into it, some value `y` will be returned. This is called the constant function as it returns a constant value of `y` no matter what you pass in for `x`."
