@@ -85,7 +85,7 @@ the same in javascript:
 function thing(x){return y}(x)
 ```
 
-"With this function: `λx.y`, it doesn’t matter what you pass into it, some value y will be returned. This is called the constant function as it returns a constant value of y no matter what you pass in for x."
+"With this function: `λx.y`, it doesn’t matter what you pass into it, some value `y` will be returned. This is called the constant function as it returns a constant value of `y` no matter what you pass in for `x`."
 
 ## bound and free variables
 there are rules when you apply a value to a function. in the function `λx.y (z)`, there are two variables: `x` and `y`. 
