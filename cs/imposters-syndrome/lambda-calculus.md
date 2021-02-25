@@ -99,7 +99,7 @@ the difference between the two is very important. i can substitute `x` in this f
 
 this wouldn't change the meaning of the function. if i tried to change `y`, then we would have some trouble. to understand why, we need to dive into substitutions and reductions.
 
-(question): the examples for this concept are confusing. he introduces this idea like: "In this expression we’re dealing with two variables: x and y." i'm not sure which expression he's talking about? the one from the previous section? i tried using the one for the previous section (`λx.y (z)`), but that doesn't match his substitution: `λz.z y`. what am i misunderstanding? i can understand this: `λz.z y`, it would look like this in javascript: `(z => z)(y)`. `y` is applied to the anonymous function, via the `z` argument.
+(question): the examples for this concept are confusing. he introduces this idea like: "In this expression we’re dealing with two variables: x and y." i'm not sure which expression he's talking about? the one from the previous section? i tried using the one for the previous section (`λx.y (z)`), but that doesn't match his substitution: `λz.z y`. what am i misunderstanding? i can understand this: `λz.z y`, it would look like this in javascript: `(z => z)(y)`. `y` is applied to the anonymous function, via the `z` argument. `z` can be replaced with `x`, so this expression would do the same thing: `(x => x)(y)`. in lambda calculus: `λx.x (y)`
 
 glad to have worked with javascript and already using some of these ideas without realizing it.
 
