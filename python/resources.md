@@ -1,2 +1,3 @@
 - [a collection of learning resources](https://learnbyexample.github.io/py_resources/)
 - [examples of the requests library](https://realpython.com/python-requests/)
+- [make a decorator for a flask app](https://stackoverflow.com/questions/16653421/python-flask-best-practice-for-service-layer)
