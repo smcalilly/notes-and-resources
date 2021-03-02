@@ -70,4 +70,4 @@ pipeline worked for the review app but not when the code deployed to the staging
 
 
 ## questions
-- what is a "stack" ?
+- ~~what is a "stack" ?~~ (A Heroku stack is a build and deployment environment, maintained by Heroku to simplify devops.). a container can be a stack
