@@ -70,4 +70,4 @@ pipeline worked for the review app but not when the code deployed to the staging
 
 
 ## questions
-- ~~what is a "stack" ?~~ (A Heroku stack is a build and deployment environment, maintained by Heroku to simplify devops.). a container can be a stack
+- ~~what is a "stack" ?~~ (A Heroku stack is a build and deployment environment, maintained by Heroku to simplify devops. Heroku applications target a specific stack, and buildpacks are responsible for transforming an app's source code into an executable package that is compatible with that stack. [see their docs](https://www.google.com/search?client=firefox-b-1-d&q=heroku+stack))
