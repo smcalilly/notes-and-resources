@@ -22,5 +22,10 @@ the pattern organizes object construction into a set of steps (`build_walls`, `b
 #### Director
 you can go further and create another classs called `Director`, who defines the order in which to execute the building steps, while the builder provides the implementation for those steps.
 
+## psuedocode
+a car is a complex object. instead of bloating the car class with a huge constructor, extract the car assembly code into a separate car builder class.
+
+client code > director > builder. client delegates the assembly to the director class, which knows how to use a builder to construct several types of cars.
+
 ## notes
 i don't think this pattern is what i need right now. [return to this later](https://refactoring.guru/design-patterns/builder#structure)
