@@ -12,20 +12,22 @@ here's a higher order component. i'm pretty sure i got the skeleton of this code
 ```jsx
 import React from "react"
 
-// Higher order component that tracks visibility,
-// with callbacks passed in via props.
 class TrackVisibility extends React.Component {
     ref = React.createRef()
-  
+
     componentDidMount() {
       this.observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            // if the element is visible on the 
+            // if the element is visible on the
             // page, return this function
             return this.props.isVisible()
+          } 
+
+          if (entry.boundingClientRect.top > 0) {
+            return this.props.isBelowViewport?.()
           } else {
-            return this.props.notVisible()
+            return this.props.isAboveViewport?.()
           }
         },
         {
@@ -33,23 +35,22 @@ class TrackVisibility extends React.Component {
           threshold: this.props.threshold,
         }
       )
-  
+
       if (this.ref.current) {
         this.observer.observe(this.ref.current)
       }
     }
-  
+
     componentWillUnmount() {
       this.observer.unobserve(this.ref.current)
     }
-  
+
     render() {
       return <div ref={this.ref}>{this.props.children}</div>
     }
   }
 
 export default TrackVisibility
-
 ```
 
 i used it like this:
@@ -68,16 +69,16 @@ const Layout = ({ children }) => {
     <>
       <Header />
 
-      <TrackVisibility 
-        isVisible={() => setShowPopup(false)} 
-        notVisible={() => setShowPopup(true)}
-        threshold={1.0}>
+      <TrackVisibility
+        isVisible={() => setShowDonate(false)}
+        isAboveViewport={() => setShowDonate(true)}
+        threshold={0}>
       </TrackVisibility>
 
       <main>{children}</main>
       <Footer locale={locale} showLanguageOption={showLanguageOption} />
 
-      {showPopup ? <Popup /> : null}
+      {showDonate ? <StickyDonate /> : null}
     </>
   )
 }
@@ -85,4 +86,4 @@ const Layout = ({ children }) => {
 export default Layout
 ```
 
-track visibility lives on the DOM. when the element is visible, a callback function called `isVisible` executes. in this case, it's `setShowPopup(false)`. once the element goes out of the viewport, the callback function `notVisible` executes.
+track visibility lives on the DOM. when the element is visible, a callback function called `isVisible` executes. in this case, it's `setShowPopup(false)`. once the element goes out of the viewport above, the callback function `isAboveViewport` executes.
