@@ -51,6 +51,9 @@ p.close()
 
 "use `apply_async` if you want a non-blocking call," [said stackoverflow user noxdafox](https://stackoverflow.com/questions/43565035/python-multiprocessing-pool-how-to-use-with-no-iterable#answer-43565080)
 
+## apply vs map vs starmap
+[see this stackoverflow discussion](https://stackoverflow.com/questions/8533318/multiprocessing-pool-when-to-use-apply-apply-async-or-map/59663852#59663852)
+
 # multi-threading vs multi-processing
 https://towardsdatascience.com/parallelism-with-python-part-1-196f0458ca14
 > TL;DR: Parallelise a CPU-bound task with multiprocessing, and a I/O-bound task with multithreading
