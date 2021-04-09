@@ -16,3 +16,21 @@ if __name__ == '__main__':
 ```
 
 this will print `1, 4, 9`
+
+map is applying the `[1, 2, 3]` iterable to the `f` function. from the source code:
+```python
+def map(self, func, iterable, chunksize=None):
+        '''
+        Apply `func` to each element in `iterable`, collecting the results
+        in a list that is returned.
+        '''
+        return self._map_async(func, iterable, mapstar, chunksize).get()
+```
+
+`map` is a method for the `Pool` class:
+```python
+class Pool(object):
+    '''
+    Class which supports an async version of applying functions to arguments.
+    '''
+```
