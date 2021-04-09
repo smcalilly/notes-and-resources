@@ -42,7 +42,7 @@ def map(self, func, iterable, chunksize=None):
 ```
 
 ## apply
-use apply if you want multiprocessing for a function but it doesn't require an iterable.
+use apply if you want multiprocessing for a function without an iterable:
 ```python
 p = ThreadPool(processes=10)
 p.apply(function_to_call)
