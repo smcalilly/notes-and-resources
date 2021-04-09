@@ -50,3 +50,14 @@ p.close()
 ```
 
 "use `apply_async` if you want a non-blocking call," [said stackoverflow user noxdafox](https://stackoverflow.com/questions/43565035/python-multiprocessing-pool-how-to-use-with-no-iterable#answer-43565080)
+
+# multi-threading vs multi-processing
+https://towardsdatascience.com/parallelism-with-python-part-1-196f0458ca14
+> TL;DR: Parallelise a CPU-bound task with multiprocessing, and a I/O-bound task with multithreading
+
+### thread
+thread is a separate flow of execution. when you have a pool of worker threads, the will be executing close-to concurrency. the thread will share a common data space, so the global interpreter lock helps limit one python thread to run at a time to avoid inconsistent changes in shared memory. this helps python use non thread safe C operations. threads lock the caller thread when they need to use the CPU for computation. **this means that threads are less efficient for CPU-bound tasks and better used for I/)-bound tasks** (like networking or database operations, etc)
+
+### process
+process can be understood as a separate python process that has forked from the parent process and has its own python interpreter (q: kinda like how bash works?). so a process has its own GIL and won't lock other processes out when executing on a CPU core.
+> The price for avoiding the GIL bottleneck is to have a larger memory overhead as a copy of the address space, or copy-on-write if supported is needed for every process. Because of that, processes are usually more preferable when conducting CPU-bound tasks e.g. matrix manipulations.
