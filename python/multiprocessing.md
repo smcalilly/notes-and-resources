@@ -31,7 +31,7 @@ class Pool(object):
 ```
 
 ## map
-in the above example, map is applying the `[1, 2, 3]` iterable to the `f` function. from the source code:
+[in the intro example](#example), map is applying the `[1, 2, 3]` iterable to the `f` function. from the source code:
 ```python
 def map(self, func, iterable, chunksize=None):
         '''
