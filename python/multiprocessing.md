@@ -19,7 +19,10 @@ this will print `1, 4, 9`.
 
 
 ## Pool
-`map` is a method for the `Pool` class:
+from the Python docs: 
+> One can create a pool of processes which will carry out tasks submitted to it with the Pool class.  
+
+> `class Pool`: A process pool object which controls a pool of worker processes to which jobs can be submitted. It supports asynchronous results with timeouts and callbacks and has a parallel map implementation.
 ```python
 class Pool(object):
     '''
