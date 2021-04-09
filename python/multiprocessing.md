@@ -34,11 +34,11 @@ class Pool(object):
 [in the intro example](#example), map is applying the `[1, 2, 3]` iterable to the `f` function. from the source code:
 ```python
 def map(self, func, iterable, chunksize=None):
-        '''
-        Apply `func` to each element in `iterable`, collecting the results
-        in a list that is returned.
-        '''
-        return self._map_async(func, iterable, mapstar, chunksize).get()
+    '''
+    Apply `func` to each element in `iterable`, collecting the results
+    in a list that is returned.
+    '''
+    return self._map_async(func, iterable, mapstar, chunksize).get()
 ```
 
 ## apply
