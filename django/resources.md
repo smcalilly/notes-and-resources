@@ -22,3 +22,4 @@ misc resources for django, resources found along the way and need more time to d
 ## etc
 - [recaptcha v2 in a django view](https://simpleisbetterthancomplex.com/tutorial/2017/02/21/how-to-add-recaptcha-to-django-site.html#recaptcha-decorator)
 - [from the above example: how to make a reusable decorator to use for a view](https://simpleisbetterthancomplex.com/tutorial/2017/02/21/how-to-add-recaptcha-to-django-site.html#recaptcha-decorator)
+- [classy based views!](https://spapas.github.io/2018/03/19/comprehensive-django-cbv-guide/)
