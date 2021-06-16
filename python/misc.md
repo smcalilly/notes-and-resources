@@ -1,0 +1,1 @@
+- [`difflib.SequenceMatcher` in standard library](https://stackoverflow.com/a/19717277)
