@@ -4,6 +4,12 @@
 ## Set
 Set is like a math set. Every item is unique. Good for membership checks. Look ups have a time complexity of O(1). Python has some handy set methods.
 
+["are python sets immutable?"](https://stackoverflow.com/questions/14193438/are-python-sets-mutable/14193582):
+> Sets are unordered.
+> Set elements are unique. Duplicate elements are not allowed.
+> A set itself may be modified, but the elements contained in the set must be of an immutable type.
+
+
 ### set example
 ```python
 template = 'The quick brown fox jumped over the lazy dog.'
