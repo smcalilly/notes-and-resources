@@ -28,7 +28,7 @@ set_distance = len(intersection) / len(template_tokens)
 print(f'set distance: {set_distance}')
 
 # find the jaccard distance
-jaccard_distance = len(intersection) / len(text_tokens | template_tokens)
+jaccard_distance = len(intersection) / len(text_tokens | template_tokens) // can also do: len(text_tokens.union(template_tokens))
 print(f'jaccard_distance: {jaccard_distance}')
 ```
 
