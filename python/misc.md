@@ -1,1 +1,4 @@
 - [`difflib.SequenceMatcher` in standard library](https://stackoverflow.com/a/19717277)
+- string `.split()` defaults to splitting the string at spaces and newlines
+  - >  The default separator is any whitespace character such as space, \t, \n, etc. 
+  - from https://www.tutorialsteacher.com/python/string-split
