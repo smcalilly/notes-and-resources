@@ -63,5 +63,4 @@ print(f'precision: {precision}')
 ```python
 symmetric_difference = ground_truth ^ extracted
 print(f'symmetric_difference: {symmetric_difference}')
-{'1546/Exhibit P /Exhibit P/ PO Principal.pdf', '2203/Exhibit P (00832880xC1414).PDF', '1546/Exhibit P /Exhibit P: PO Principal.pdf'}
 ```
