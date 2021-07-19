@@ -4,6 +4,8 @@
 ## Set
 Set is like a math set. Every item is unique. Good for membership checks. Look ups have a time complexity of O(1). Python has some handy set methods.
 
+https://docs.python.org/2/library/stdtypes.html#set
+
 ["are python sets immutable?"](https://stackoverflow.com/questions/14193438/are-python-sets-mutable/14193582):
 > Sets are unordered.
 > Set elements are unique. Duplicate elements are not allowed.
@@ -39,3 +41,27 @@ print(f'jaccard_distance: {jaccard_distance}')
 
 read later:
 https://www.digitalocean.com/community/tutorials/understanding-lists-in-python-3 and different pieces of that tutorial, like tuple and set
+
+## set methods
+```python
+ground_truth = get_ground_truth()
+print(f'ground_truth: {len(ground_truth)}')
+
+extracted = get_extracted()
+print(f'extracted: {len(extracted)}')
+
+correct_extractions = ground_truth & extracted
+print(f'correct_extractions: {len(correct_extractions)}')
+
+recall = len(correct_extractions) / len(ground_truth)
+print(f'recall: {recall}')
+
+precision = len(correct_extractions) / len(extracted)
+print(f'precision: {precision}')
+```
+
+```python
+symmetric_difference = ground_truth ^ extracted
+print(f'symmetric_difference: {symmetric_difference}')
+{'1546/Exhibit P /Exhibit P/ PO Principal.pdf', '2203/Exhibit P (00832880xC1414).PDF', '1546/Exhibit P /Exhibit P: PO Principal.pdf'}
+```
