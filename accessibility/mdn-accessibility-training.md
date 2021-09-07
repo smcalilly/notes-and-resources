@@ -37,5 +37,45 @@ buttons, links, select, label, and form controls. by default, browsers allow the
 
 you get all this for free, simply by using the correct html elements!
 
-## todo
-pick backup here: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels
+## labels
+use good labels for things like buttons and links. don't use a generic "Click here" because that's not descriptive to a screen reader. it's especially bad if there are several "click here" buttons on a page -- a screen reader has no idea where "here" is. so use language that indicates where here is. 
+
+this is their good example:
+```html
+<p>Whales are really awesome creatures. <a href="whales.html">Find out more about whales</a>.</p>
+```
+
+this is their bad example:
+```html
+<p>Whales are really awesome creatures. To find more out about whales, <a href="whales.html">click here</a>.</p>
+```
+
+### form labels
+form's have the `label` tag that helps with this. using the `label` tag tells a screen reader what the form input is for. a good example:
+```html
+<div>
+  <label for="name">Fill in your name:</label>
+  <input type="text" id="name" name="name">
+</div>
+```
+
+### aria-label
+if an anchor tag doesn't have text in the link, use the `aria-label` attribute. but use this as a last resort, first try and use semantic html with good labels.
+
+## tables
+use `th` tags to help screen readers. the `caption` tag gives a summary.
+
+## text alternatives
+for `img`s, add alt text with the `alt` attribute. you can also add a `title`.
+
+## links with onclick events
+don't do it. don't add javascript to the link. don't override the default behavior. just use the `button` tag if you need something like that. semantic html!!!
+
+## external links and non-html resources
+if a link opens to a new tab or window, and there is no text telling a user that, then it might be confusing. here's a good example when targeting a new tab:
+```html
+<a target="_blank" href="https://www.wikipedia.org/">Wikipedia (opens in a new window)</a>
+```
+
+## skip links
+help assitive technology navigate pages, when different sections are linked. read here for more details: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#skip_links
