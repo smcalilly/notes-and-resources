@@ -54,7 +54,7 @@ big O establishes a worst-case run time.
 
 there are other runsimes, but these are the most common
 
-### takeaway
+### takeaways
 - algorithmic speed isn't measured in seconds, but in growth of the number of operations
 - instead, we talk about how quickly the run time of an algorithm increases as the size of the input increases
 - run time of the algorithms is expressed in Big O notation
