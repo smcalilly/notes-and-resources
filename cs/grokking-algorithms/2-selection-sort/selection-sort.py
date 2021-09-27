@@ -2,10 +2,10 @@ def find_smallest(arr):
     smallest = arr[0]
     smallest_index = 0
 
-    for i in range(1, len(arr)):
-        if arr[i] < smallest:
-            smallest = arr[i]
-            smallest_index = i
+    for index, element in enumerate(arr):
+        if smallest > arr[index]:
+            smallest = arr[index]
+            smallest_index = index
 
     return smallest_index
 
