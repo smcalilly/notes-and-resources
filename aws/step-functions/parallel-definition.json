@@ -1,0 +1,77 @@
+{
+    "StartAt": "GottaDoThemAll",
+    "States": {
+      "GottaDoThemAll": {
+        "Type": "Parallel",
+        "Branches": [
+          {
+            "StartAt": "Add",
+            "States": {
+              "Add": {
+                "Type": "Task",
+                "Resource": "arn:aws:lambda:us-east-1:417685061720:function:hello-world-dev-add",
+                "Next": "Double"
+              },
+              "Double": {
+                "Type": "Task",
+                "Resource": "arn:aws:lambda:us-east-1:417685061720:function:hello-world-dev-double",
+                "End": true
+              }
+            }
+          },
+          {
+            "StartAt": "PickX",
+            "States": {
+              "PickX": {
+                "Type": "Pass",
+                "InputPath": "$.x",
+                "Next": "Double2"
+              },
+              "Double2": {
+                "Type": "Task",
+                "Resource": "arn:aws:lambda:us-east-1:417685061720:function:hello-world-dev-double",
+                "End": true
+              }
+            }
+          },
+          {
+            "StartAt": "Wait5Seconds",
+            "States": {
+              "Wait5Seconds": {
+                "Type": "Wait",
+                "Seconds": 5,
+                "End": true
+              }
+            }
+          },
+          {
+            "StartAt": "NestedParallel",
+            "States": {
+              "NestedParallel": {
+                "Type": "Parallel",
+                "Branches": [
+                  {
+                    "StartAt": "PickY",
+                    "States": {
+                      "PickY": {
+                        "Type": "Pass",
+                        "InputPath": "$.y",
+                        "Next": "Double3"
+                      },
+                      "Double3": {
+                        "Type": "Task",
+                        "Resource": "arn:aws:lambda:us-east-1:417685061720:function:hello-world-dev-double",
+                        "End": true
+                      }
+                    }
+                  }
+                ],
+                "End": true
+              }
+            }
+          }
+        ],
+        "End": true
+      }
+    }
+  }
