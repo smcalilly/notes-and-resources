@@ -79,5 +79,7 @@ it uses a public key and a private key. the public key can be public. when someb
 diffie-hellman's successor is RSA. if you're interested in cryptography, diffie-hellman is a good place to start.
 
 ## linear programming
-used to maximize something given constraints. you make shirts and totes. each item takes a certain amount of materials. you make $2/shirt and $3/tote. how many of each do you make to maximize profit, based on material on hand? 
+used to maximize something given constraints. you make shirts and totes. each item takes a certain amount of materials. you make $2/shirt and $3/tote. how many of each do you make to maximize profit, based on material on hand?
+
+linear programming can solve this. it uses the Simplex algorithm. if you're interested in optimization, look up linear programming
 
