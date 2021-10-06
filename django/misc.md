@@ -1,1 +1,2 @@
 - query dicts with a list: https://stackoverflow.com/questions/39565023/django-querydict-only-returns-the-last-value-of-a-list
+- migration conflict: https://www.accordbox.com/blog/wagtail-tutorial-12-how-create-and-manage-menus-wagtail-application/
