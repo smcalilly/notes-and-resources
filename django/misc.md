@@ -1,1 +1,3 @@
 - query dicts with a list: https://stackoverflow.com/questions/39565023/django-querydict-only-returns-the-last-value-of-a-list
+- migration conflict: https://www.algotech.solutions/blog/python/django-migrations-and-how-to-manage-conflicts/
+- class-based view decorator for authentication: https://docs.djangoproject.com/en/2.0/topics/class-based-views/intro/#decorating-the-class
