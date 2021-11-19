@@ -306,3 +306,28 @@ WHERE r.franchise = 'HDE'
 returns 3
 
 in openjump, connect to postgres. 
+
+draw route 1
+```sql
+SELECT gid, name, geom
+FROM ch01.highways
+WHERE name = 'US Route 1' AND state = 'MD';
+```
+
+overlay the 20-mile corridor:
+```sql
+SELECT ST_Union(ST_Buffer(geom, 1609*20))
+FROM ch01.highways
+WHERE name = 'US Route 1' AND state = 'MD';
+```
+
+position hardee's in the buffer zone:
+```sql
+SELECT r.geom
+FROM ch01.restaurants r
+WHERE EXISTS
+  (SELECT gid FROM ch01.highways
+  WHERE ST_DWithin(r.geom, geom, 1609*20) AND
+  name = 'US Route 1'
+  AND state = 'MD' AND r.franchise = 'HDE');
+```
