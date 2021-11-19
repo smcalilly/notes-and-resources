@@ -244,3 +244,65 @@ you're using a point geometry column to store your restaurants locations. the se
 you gotta have common projections before you can compare two data sets. this example uses EPSG:2136, which is an equal-area projection covering the continental US.
 
 SRID and spatial reference systems. these refer to records in the spatial_re_sys table, where srid is the column that uniquely identifies the record. ID 4326 is the most popular and refers to a spatial reference system called WGS 84 lon/lat. (this will be covered in chapter 3)
+
+#### import from shapefile
+use `shp2pgsql`:
+```bash
+shp2pgsql -D -s 4269 -g geom -I /home/sam/code/notes-and-resources/mapping/postgis/data/roadtrl020.shp ch01.highways_staging | psql -h localhost -U postgres -p 5432 -d postgis_in_action
+```
+you could transform the srid with shp2pgsql: `4269:2163`
+
+check the data to make sure you think it imported
+
+then do an insert. need to transform SRID from 4269 to 2163 and only select columns that you defined in your production table. you can also filter the data to only the needed rows.
+
+```sql
+INSERT INTO ch01.highways (gid, feature, name, state, geom)
+SELECT gid, feature, name, state, ST_Transform(geom, 2163)
+FROM ch01.highways_staging
+WHERE feature LIKE 'Principal Highway%';
+```
+
+follow up with a vacuum analyze so the statistics are up to date:
+```
+vacuum analyze ch01.highways;
+```
+? todo: what? it just returned `VACUUM`
+
+#### writing the query
+how many fast food restaurants are within one mile of a highway?
+
+```
+SELECT f.franchise, COUNT(DISTINCT r.id) AS total -- remove duplicates
+FROM ch01.restaurants as R
+  INNER JOIN ch01.lu_franchises AS f on r.franchise = f.id
+    INNER JOIN ch01.highways as H
+      ON ST_DWithin(r.geom, h.geom, 1609) -- spatial join
+GROUP BY F.franchise
+ORDER BY total DESC;
+```
+
+join the restaurants table with the highways table using the `ST_DWithin` function. this function accepts two geometries and returns TRUE if the minimum distance between the two geometries is within the specified distance. in this case, you pass in apoint for the restaurant, a multilinestring for the highway, and 1609 meters as the distance. all restaurant-highway pairs matching the join condition will filter through.
+
+join condition does allow for duplicates. a mcdonalds at the intersection of two highways will show up twice. so you do COUNT(DISTINCT) to prevent that.
+
+#### viewing spatial data with openjump
+https://sourceforge.net/projects/jump-pilot/files/OpenJUMP/1.16/
+
+https://ojwiki.soldin.de/index.php?title=Working_with_Databases
+
+gonna draw a buffer zone around highway segments and see how many dots fall within them. gonna use `ST_Buffer` function. this function will take any geometry and radially expand it by a specified number of units. the post-expansion polygonal geometry is called a *buffer zone* or *corridor*.
+
+locate hardee's within a 20-mile buffer of route 1 in the state of maryland:
+```sql
+SELECT COUNT(DISTINCT r.id) AS total
+FROM ch01.restaurants AS r
+  INNER JOIN ch01.highways AS h
+  ON ST_DWithin(r.geom, h.geom, 1609*20)
+WHERE r.franchise = 'HDE'
+  AND h.name = 'US Route 1' AND h.state = 'MD';
+```
+
+returns 3
+
+in openjump, connect to postgres. 
