@@ -1,0 +1,4 @@
+#loading states data using psql
+//<start id="load_states_az_nm_tz" />
+\i /data/ch02/states_az_nm_tx.sql;
+//<end id="load_states_az_nm_tz" />
