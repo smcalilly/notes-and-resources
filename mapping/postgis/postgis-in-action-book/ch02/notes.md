@@ -273,3 +273,101 @@ ST_CurvedToLine
 - circularstrings
 - compound curves / curvepolygon
 - curvepolygons
+
+#### spatial catalog for geometry
+postgis fhas a read-only view named `geometry _columns` that lists all the geometry columns within the database. it view reads from postgres system catalogs, so the info will stay in sync with any definition changes or addition of geometry columns you make to tables.
+
+postgis will automatically register views, materialized views, and foreign tables that contain columns of the geometry data type. you can retrieve this info from the `geometry_coumns` view just as you do with the tables.
+
+you might need to cast the geometry column in your view definition if the column is based on a function. for example, suppose you create a view:
+```sql
+CREATE VIEW my_view AS
+    SELECT gid, ST_Transform(geom,4326) geom
+      FROM some_table;
+```
+
+postgis isn't smart enough to infer the SRID from your view definition or to know that `ST_Transform` will always result in the same geometry type as the input. it'll lazily record the column as just geometry without additional info. this is especially likely to happen if you use check constraints to restrict the subtype or if you use any postgis function to morph the geometry, such as `ST_Transfrom` or `ST_Centroid`, in your view definition. if any of these apply to your view, you should create your view with an extra cast:
+```sql
+CREATE VIEW my_view AS
+    SELECT gid, ST_Transform(geom,2163)::geometry(POINT,2163) geom
+    FROM some_table;
+```
+
+if you have no functions applied to a column geometry_columns will show the column info from the underlying table column. if you are using type modifiers on your geometry column and using the column directly, this is sufficient:
+```sql
+CREATE VIEW my_view AS
+    SELECT gid, geom
+    FROM some_table;
+```
+
+see page 55 for the structure of the `geometry_columns` view.
+
+these two bits need more discussion:
+- `coord_dimension`:
+  - the coordinate dimension of the geometry column; permissible values are 2, 3, and 4 (X, Y, Z, M)'
+  - in spatial speak there are two kinds of dimensions -- the coordinate dimension and the geometry dimension
+    1. *coordinate dimension*: defines the number of linearly independent axes in your space. for example: (X, Y, Z) or (X, Y, M) have a coordinate dimension of 3. (X, Y, Z, M) have a coordinate dimension of 4.
+    2. *geometry dimension*: describes the size and shape of geometry. a flat polygon is a two-dimensional geometry because you can speak in terms of length and width. a linestring is a one dimensional geometry because only the length is relevant measure. a point, by defintion, has zero dimensions.
+  - most people expect you to know which kind of dimension, coordinate, or geometry is being referred to from context alone, but can become confusing when using both simultaneously. one rule to count on: a geometry dimension can never exceed the coordinate dimension it's living in.
+
+- SRID
+  - spatial reference identifier. primary key that relates to the `spatial_ref_sys` lookup table. has a lot built in. you can add your own.
+  - SRS ID is a similar term:
+    - WGS 84 lon/lat has an SRID of 4326 but SRS ID of EPSG:4326. the SRID in the spatial_ref_sys table comes from the ESPSG identifier.
+    - default SRID is unknown (0). if you know the SRS of your data (like for mapping), you should specifically specify your SRID. if you're using postgis for non-geographical purposes, it's okay to use the default SRID of 0.
+
+#### managing geometry columns
+this was a big headache before postgis 2.0. 2.0 introduced the type modifier syntax that allows you to add new columns and not worry about adding constraints for subtype and SRID. postgis will now also automatically list the column in the geometry columns view for you.
+
+changing the SRID of an existing column:
+```sql
+ALTER TABLE us_states
+ALTER COLUMN geom TYPE geometry(MULTIPOLYGON,4326)
+USING ST_SetSRID(geom,4326);
+```
+
+coverting a geometry column to a geography column:
+```sql
+ALTER TABLE osm_roads
+ALTER COLUMN way TYPE geography(MULTIPOLYGON, 4326)
+USING ST_Transform(way,4326)::geography;
+```
+
+`Populate_Geometry_Columns` management function is handy at times. it scans all unregistered geometry columns in your database or a table that you specify. if the column is a generic geometry column or has an unknown SRID, it will examine the data and try to pinpoint the subtype and SRID. if it can identify a uniform subtype, it will add the subtype to you column definition using typmod syntax or check constraints. if it can determine the SRID, it will add the SRID to your column definition using typmod syntax or check constraints. (TODO: learn about contraints / check constraints in postgres)
+
+## geometry
+postgis started with geometry but found they needed geography. so they came up with a new data type that took the earth's sphere into account.
+
+### differences between geography and geometry
+geography assumes that all your data is based on geodetic coordinate system, specifically the WGS 84 lon/lat SRID of 4326. this is the default, but you use any other systems with postgis >=2.2
+
+you're gonna find yourself missing support for all but the basic subtypes of points, linestrings, and polygons. also don't expect much support for anything above 2D space.
+
+the structure of the geography data subtypes mimic those of geometry, so everything you know about geometry applies to geography with no changes, except for swapping out the term `geometry` for `geography` in both data type and function names. for example, `ST_GeomFromText` becomes `ST_GeogFromText`.
+
+using the geography data type:
+```sql
+CREATE TABLE ch02.my_geogs (
+    id serial PRIMARY KEY,
+    name varchar(20),
+    my_point geography(POINT)
+);
+INSERT INTO ch02.my_geogs (name, my_point)
+VALUES 
+    ('Home', ST_GeogFromText('POINT(0 0)')),
+    ('Pizza 1', ST_GeogFromText('POINT(1 1)')),
+    ('Pizza 2', ST_GeogFromText('POINT(1 -1)'));
+```
+
+difference between `geometry` and `geography` becomes apparent when you ask, how far is my house from each pizza restaurant?
+```sql
+SELECT
+    h.name AS house, p.name AS pizza,
+    ST_Distance(h.my_point, p.my_point) AS dist
+FROM
+    (SELECT name, my_point FROM ch02.my_geogs WHERE name = 'Home') AS h
+    CROSS JOIN
+    (SELECT name, my_point FROM ch02.my_geogs WHERE name LIKE 'Pizza%') AS p;
+```
+
+both pizza places return 156899.56829134 meters. points in `geography` correspond to longitude and latitude, and distances are always computed in meters. if you performed the same distance computation using geometry, you'd end up with 1.414 (the square root of 2) -- a straightforward pythagorean calculation.
