@@ -1,0 +1,1 @@
+a plane's coordinate system that specifies each point uniquely by a pair of numerical coordinates (x, y)

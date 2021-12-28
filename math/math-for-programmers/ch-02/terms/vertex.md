@@ -1,0 +1,1 @@
+a point where two or more lines, edges, or curves meet. vertices, plural

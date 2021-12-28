@@ -8,8 +8,8 @@
       "name": "aws",
       "runtime": "nodejs12.x",
       "lambdaHashingVersion": "20201221",
+      "region": "us-east-2",
       "stage": "dev",
-      "region": "us-east-1",
       "versionFunctions": true,
       "compiledCloudFormationTemplate": {
         "AWSTemplateFormatVersion": "2010-09-09",
@@ -186,7 +186,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hello-world/dev/1633198353032-2021-10-02T18:12:33.032Z/hello-world.zip"
+                "S3Key": "serverless/hello-world/dev/1638847019036-2021-12-07T03:16:59.036Z/hello-world.zip"
               },
               "Handler": "handler.add",
               "Runtime": "nodejs12.x",
@@ -211,7 +211,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hello-world/dev/1633198353032-2021-10-02T18:12:33.032Z/hello-world.zip"
+                "S3Key": "serverless/hello-world/dev/1638847019036-2021-12-07T03:16:59.036Z/hello-world.zip"
               },
               "Handler": "handler.double",
               "Runtime": "nodejs12.x",
@@ -236,7 +236,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/hello-world/dev/1633198353032-2021-10-02T18:12:33.032Z/hello-world.zip"
+                "S3Key": "serverless/hello-world/dev/1638847019036-2021-12-07T03:16:59.036Z/hello-world.zip"
               },
               "Handler": "handler.doubleBigNumber",
               "Runtime": "nodejs12.x",
@@ -293,7 +293,7 @@
                   {
                     "Effect": "Allow",
                     "Principal": {
-                      "Service": "states.us-east-1.amazonaws.com"
+                      "Service": "states.us-east-2.amazonaws.com"
                     },
                     "Action": "sts:AssumeRole"
                   }
@@ -301,7 +301,7 @@
               },
               "Policies": [
                 {
-                  "PolicyName": "dev-us-east-1-hello-world-statemachine",
+                  "PolicyName": "dev-us-east-2-hello-world-statemachine",
                   "PolicyDocument": {
                     "Version": "2012-10-17",
                     "Statement": [
@@ -676,7 +676,7 @@
     "artifact": "/Users/sammcalilly/code/notes-and-resources/aws/step-functions/simple-maths/.serverless/hello-world.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/hello-world/dev/1633198353032-2021-10-02T18:12:33.032Z",
+    "artifactDirectoryName": "serverless/hello-world/dev/1638847019036-2021-12-07T03:16:59.036Z",
     "artifact": "hello-world.zip"
   }
 }

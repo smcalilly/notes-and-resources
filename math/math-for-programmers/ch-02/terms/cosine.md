@@ -1,0 +1,1 @@
+cos(angle) = horizontal / distance

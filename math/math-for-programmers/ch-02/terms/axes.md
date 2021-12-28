@@ -1,0 +1,1 @@
+two perpendicular lines that make up the [[plane]], intersecting at the [[origin]]. singular is axis.

@@ -1,0 +1,1 @@
+the result of subtracting a vector from another vector

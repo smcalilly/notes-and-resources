@@ -1,0 +1,1 @@
+sin(angle) = vertical / distance

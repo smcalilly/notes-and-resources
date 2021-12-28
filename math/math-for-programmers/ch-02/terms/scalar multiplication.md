@@ -1,0 +1,1 @@
+multiplying a vector by a number

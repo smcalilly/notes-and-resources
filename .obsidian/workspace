@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "b0ebb6ffd1e6fb6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c9c8dbccc97369f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "math/math-for-programmers/todo.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "814f54d90245ba26",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c18eb3a3ec42e0c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e545292de7c37d50",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "7dfc7afc85ba1141",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "todo",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1b906016ffa0a936",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f3b8db0337969e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b9f593e40b38613",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "math/math-for-programmers/todo.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "3c9c8dbccc97369f",
+  "lastOpenFiles": [
+    "math/math-for-programmers/todo.md",
+    "math/math-for-programmers/ch-02/terms/polar coordinates.md",
+    "misc.md",
+    "math/math-for-programmers/ch-02/2D-vectors.md",
+    "math/math-for-programmers/ch-02/terms/radians.md",
+    "math/math-for-programmers/resources.md",
+    "math/math-for-programmers/ch-02/terms/cosine.md",
+    "math/math-for-programmers/ch-02/terms/sine.md",
+    "math/math-for-programmers/ch-02/terms/tangent.md",
+    "math/math-for-programmers/ch-02/terms/cartesian coordinates.md"
+  ]
+}
