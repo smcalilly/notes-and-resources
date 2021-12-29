@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "todo",
+                "query": "displacement",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,14 +90,14 @@
   "active": "3c9c8dbccc97369f",
   "lastOpenFiles": [
     "math/math-for-programmers/todo.md",
-    "math/math-for-programmers/ch-02/terms/polar coordinates.md",
-    "misc.md",
     "math/math-for-programmers/ch-02/2D-vectors.md",
-    "math/math-for-programmers/ch-02/terms/radians.md",
-    "math/math-for-programmers/resources.md",
-    "math/math-for-programmers/ch-02/terms/cosine.md",
+    "math/math-for-programmers/ch-02/terms/displacement.md",
+    "math/math-for-programmers/ch-02/terms/pythagorean theorem.md",
     "math/math-for-programmers/ch-02/terms/sine.md",
+    "math/math-for-programmers/ch-02/terms/cosine.md",
+    "math/math-for-programmers/ch-02/terms/hypotenuse.md",
     "math/math-for-programmers/ch-02/terms/tangent.md",
-    "math/math-for-programmers/ch-02/terms/cartesian coordinates.md"
+    "misc.md",
+    "math/math-for-programmers/ch-02/terms/polar coordinates.md"
   ]
 }

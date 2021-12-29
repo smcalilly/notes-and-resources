@@ -152,3 +152,21 @@ but that's not right because there are multiple angles that can have the same si
 use the `math.atan2` function.
 
 trigonometric functions are tricky to do in reverse; multiple different inputs can produce the same output, so an output can't be traced back to a unique point.
+
+## transforming collections of vectors
+in polar coordinates, adding to the angle rotates a vector further counterclockwise, while subtracting from it rotates the vector clockwise.
+
+
+## summary
+- vectors are mathematical objects that live in multi-dimensional spaces. they can be geometric psaces like the 2D plane of a computer screen or 3D world we live in.
+- you can think of vectors equivalently as arrows having a specified length and direction, or as points in the plane relative to a reference point called the origin. given a point, there is a corresponding arrow that shows how to get to that point from the origin.
+- you can connect collections of points in the plane to form interesting shapes like a dinosaur
+- in 2D, coordinates are pairs of numbers that help us measure the location of points in the plane. written as a tuple (x, y), the x and y values tell us how far horizontally and vertically to travel to get to the point.
+- we can store points as coordinate tuples in python and choose from a number of libraries to draw the points on the screen
+- vector addition has the effect of translating (or moving) a first vector in the direction of a second added vector. thinking of a collection of vectors as paths to travel, their vector sum gives the overall direction and distance traveled.
+- scalare multiplication of a vector by a numberic factor yields a vector that is longer by that factor and points in the sdame direction as the original.
+- subtracting one vector from a second gives the relative position of the second vector from the first
+- vectors can be specified by their length and direction (as an angle). these two numbers define the polar coordinates of a given 2D vector.
+- the trigonmetric functions sine, cosine, and tangent are used to convert between ordinary (Cartesian) coordinates and polar coordinates.
+- it's easy to rotate shapes defined by collections of vectors in polar coordinates. you only need to add or subtract the given rotation angle from the angle of each vector. rotating and translating shpaes in the plane lets us place them anywhere and in any direction.
+

@@ -1,4 +1,4 @@
-the longest side of a right triangle
+the longest side of a right triangle. opposite of the right angle.
 
 it's length is denoted by *c* in the memorable formula `a^2 + b^2 = c^2`, where *a* and *b* are the lengths of the other two sides. 
 
