@@ -1,0 +1,1 @@
+tells us which perpendicular direction the [[cross product]] points toward

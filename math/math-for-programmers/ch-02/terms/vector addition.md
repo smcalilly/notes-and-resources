@@ -1,11 +1,17 @@
 given two input vectors, you add their x-coordinates to get the resulting x-coordinate, and then you add their y-coords to get the resulting y-coord. this returns the *vector sum*
 
+v + w 
+
+if you take the first vector and add it to the second vector, the overall effect is a vector that takes you to the sum of those vectors.
+
 (4, 3) + (-1, 1) = (3, 4)
+
+(1, 2) + (3, -1) = (4, 1)
 
 in python:
 ```python
 def add_vector(v1, v2):
-	return (v1[0] + v2[0] + v1[1] + v2[1])
+	return (v1[0] + v2[0], v1[1] + v2[1])
 ```
 
 
@@ -16,7 +22,7 @@ from collections import namedtuple
 Point = namedtuple('Point', 'x y')
 
 def add_vector(v1, v2):
-	return Point((v1.x + v2.x), v1.y + v2.y)
+	return Point(v1.x + v2.x, v1.y + v2.y)
 
 
 
