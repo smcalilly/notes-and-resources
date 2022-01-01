@@ -7,7 +7,7 @@
         "id": "3c9c8dbccc97369f",
         "type": "leaf",
         "state": {
-          "type": "graph",
+          "type": "empty",
           "state": {}
         }
       }
@@ -84,15 +84,15 @@
   },
   "active": "3c9c8dbccc97369f",
   "lastOpenFiles": [
+    "math/math-for-programmers/ch-04/o.md",
+    "math/math-for-programmers/ch-04/transforming-vectors-and-graphics.md",
+    "linear transformations.md",
+    "linear transformation.md",
     "math/math-for-programmers/ch-03/3D-space.md",
     "vector space.md",
     "math/math-for-programmers/ch-03/terms/cross product.md",
     "math/math-for-programmers/ch-03/terms/right-hand rule.md",
     "math/math-for-programmers/ch-03/terms/dot product.md",
-    "math/math-for-programmers/ch-02/terms/scalar multiplication.md",
-    "math/math-for-programmers/ch-02/terms/vector addition.md",
-    "math/math-for-programmers/todo.md",
-    "math/math-for-programmers/ch-03/terms/spherical coordinates.md",
-    "math/math-for-programmers/ch-02/2D-vectors.md"
+    "math/math-for-programmers/ch-02/terms/scalar multiplication.md"
   ]
 }
