@@ -1,0 +1,3 @@
+the three vectors (1, 0, 0), (0, 1, 0), and (0, 0, 1) are called the [[standard basis]] for three-dimensional space.
+
+denoted as e<sub>1</sub> , e<sub>2</sub>, and e<sub>3</sub>, so we could write the linear combination as (3, 4, 5) = 3e<sub>1</sub> + 4e<sub>2</sub> + 5e<sub>3</sub>. when working in 2d space, we call e<sub>1</sub> = (1, 0) and e<sub>2</sub>  = (0, 1). sor for example, (7, -4) = 7 $\times$ e<sub>1</sub> - 4 $\times$ e<sub>2</sub> 

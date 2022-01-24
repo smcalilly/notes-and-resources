@@ -7,8 +7,12 @@
         "id": "3c9c8dbccc97369f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "math/math-for-programmers/ch-04/terms/standard basis.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "math/math-for-programmers/ch-04/terms/standard basis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +89,15 @@
   },
   "active": "3c9c8dbccc97369f",
   "lastOpenFiles": [
-    "math/math-for-programmers/ch-04/o.md",
+    "math/math-for-programmers/ch-04/terms/standard basis.md",
+    "math/math-for-programmers/ch-04/terms/composition of functions.md",
     "math/math-for-programmers/ch-04/transforming-vectors-and-graphics.md",
-    "linear transformations.md",
-    "linear transformation.md",
+    "math/math-for-programmers/ch-04/terms/linear transformation.md",
+    "math/math-for-programmers/ch-04/terms/linear combination.md",
+    "math/math-for-programmers/ch-04/terms/currying.md",
+    "math/math-for-programmers/ch-04/o.md",
     "math/math-for-programmers/ch-03/3D-space.md",
     "vector space.md",
-    "math/math-for-programmers/ch-03/terms/cross product.md",
-    "math/math-for-programmers/ch-03/terms/right-hand rule.md",
-    "math/math-for-programmers/ch-03/terms/dot product.md",
-    "math/math-for-programmers/ch-02/terms/scalar multiplication.md"
+    "math/math-for-programmers/ch-03/terms/cross product.md"
   ]
 }
