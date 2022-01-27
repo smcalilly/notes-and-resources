@@ -38,3 +38,15 @@ export default function App() {
 ```
 
 this is the most common use case for refs. but because it's so easy, people tend to abuse it. instead of letting react manage state and all the changes, people tend to use ref to manage the onChange stuff.
+
+
+## useReducer
+https://www.youtube.com/watch?v=kK_Wqx3RnHk&list=PLZlA0Gpn_vH8EtggFGERCwMY5u5hOjf-h&index=6
+
+like redux. dispatch with actions. useful when you have complex state or a lot of nested components that you gotta worry about passing props down into it.
+
+this blog post talks about when to use `useState` vs `useReducer`: https://kentcdodds.com/blog/should-i-usestate-or-usereducer
+
+## useCallback
+https://www.youtube.com/watch?v=_AyFP5s69N4&list=PLZlA0Gpn_vH8EtggFGERCwMY5u5hOjf-h&index=7
+
