@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "math/math-for-programmers/ch-04/terms/standard basis.md",
+            "file": "data/finding racial disparities in education reporting.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "math/math-for-programmers/ch-04/terms/standard basis.md",
+                "file": "data/finding racial disparities in education reporting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "3c9c8dbccc97369f",
   "lastOpenFiles": [
+    "data/finding racial disparities in education reporting.md",
     "math/math-for-programmers/ch-04/terms/standard basis.md",
     "math/math-for-programmers/ch-04/terms/composition of functions.md",
     "math/math-for-programmers/ch-04/transforming-vectors-and-graphics.md",
@@ -97,7 +98,6 @@
     "math/math-for-programmers/ch-04/terms/currying.md",
     "math/math-for-programmers/ch-04/o.md",
     "math/math-for-programmers/ch-03/3D-space.md",
-    "vector space.md",
-    "math/math-for-programmers/ch-03/terms/cross product.md"
+    "vector space.md"
   ]
 }
