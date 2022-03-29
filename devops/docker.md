@@ -1,5 +1,23 @@
 # Docker
 
+```
+if i needed a specific version sans an app, i would just do docker run -it python:3.10 /bin/bash and then you're in your container w/ whatever version of python you specified w/ the tag
+
+
+cool!
+does `docker run -it <docker-image-here>`` work for other stuff? 
+like if i wanted to use the latest ubuntu or something?
+
+(optionally specifying a volume to mount some code from my machine into the container, say if i wanted to install my local version of the package docker run -v ${PWD}/:/app -it python:3.10 /bin/bash )
+yep!
+
+or postgres
+
+by default run will do the configured command but you can also tell it to do arbitrary commands like docker run [ options ] image:tag [ some arbitrary command ]
+
+i use docker run postgres pg_dump / pg_restore a lot and then /bin/bash will just drop you into a bash shell so you can cruise around in your container and do whatever
+```
+
 filling in knowledge gaps about docker
 
 ## docker vs docker-compose
