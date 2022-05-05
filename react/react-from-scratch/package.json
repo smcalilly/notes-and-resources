@@ -1,0 +1,17 @@
+{
+  "name": "react-from-scratch",
+  "version": "1.0.0",
+  "description": "learning react from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.5.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.16.7"
+  }
+}

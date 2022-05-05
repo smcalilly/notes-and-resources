@@ -1,0 +1,2 @@
+- [typescript but nice implementation](https://betterprogramming.pub/advanced-data-filtering-in-react-5ea2fa3befca)
+- [kinda how we're doing it in cales](https://betterprogramming.pub/creating-a-multi-filter-function-to-filter-out-multiple-attributes-javascript-react-rails-5aad8e272142)
