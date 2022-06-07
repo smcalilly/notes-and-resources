@@ -1,0 +1,1 @@
+- [qgis tutorial/tip sheet](https://drive.google.com/drive/folders/1LOK5Ui_dMzAito3WRZAXhG6K8vjUabxf)
