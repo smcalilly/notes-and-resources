@@ -4,16 +4,63 @@
     "type": "split",
     "children": [
       {
-        "id": "3c9c8dbccc97369f",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "django/deconstructed.md",
-            "mode": "source",
-            "source": false
+        "id": "0d84801e46586433",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c9c8dbccc97369f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "django/deconstructed.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a48fc07ad9969612",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.0"
+              }
+            }
+          },
+          {
+            "id": "dc297930a5e9006e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.9"
+              }
+            }
+          },
+          {
+            "id": "8bc4f9f8a426b64e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.15"
+              }
+            }
+          },
+          {
+            "id": "76063c11d2bfd23e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.16"
+              }
+            }
           }
-        }
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -31,7 +78,9 @@
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {}
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
@@ -87,8 +136,20 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3c9c8dbccc97369f",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "76063c11d2bfd23e",
   "lastOpenFiles": [
+    "cs/comic-python/introduction.md",
+    "cs/comic-python/ch1.md",
+    "cs/comic-python",
     "react/react-from-scratch/index.js.md",
     "react/filtering.md",
     "react/react-from-scratch/notes.md.md",
